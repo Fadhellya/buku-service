@@ -12,21 +12,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- *
- * @author ASUS
- */
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Buku {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long bukuId;
-    private Long kode;
+    private String kode;
     private String judul;
+    private String pengarang;
     private String penerbit;
-    private Integer tahunterbit;
-    
+    private int tahunTerbit;
 }

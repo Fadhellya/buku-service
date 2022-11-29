@@ -18,9 +18,10 @@ public class BukuService {
     @Autowired
     private BukuRepository bukuRepository;
     
-    public Buku saveBuku(Buku buku){
+    public Buku saveBuku (Buku buku){
         return bukuRepository.save(buku);
-    }
+    } 
+    
     public Buku findBukuById(Long bukuId){
         return bukuRepository.findByBukuId(bukuId);
     }

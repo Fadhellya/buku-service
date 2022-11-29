@@ -23,14 +23,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerBuku {
     @Autowired
     private BukuService bukuService;
+    
     @PostMapping("/")
     public Buku saveBuku(@RequestBody Buku buku){
         return bukuService.saveBuku(buku);
     }
-    @GetMapping("{id}")
-    public Buku findBukuById(@PathVariable("id")Long bukuId){
+    
+    @GetMapping("/{id}")
+    public Buku findBukuById(@PathVariable("id") Long bukuId){
         return bukuService.findBukuById(bukuId);
     }
-    
-    
 }
